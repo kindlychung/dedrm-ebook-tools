@@ -20,7 +20,7 @@ To remove the DRM of Kindle ebooks from eInk Kindles, eReader pdb ebooks, Barnes
 * Barnes & Noble ePub:  Name and CC number or key file  (bnepubkey.b64)
 * eReader: Name and last 8 digits of CC number
 * Mobipocket: 10 digit PID
-* A final preference is the destination folder for the DRM-free copies of your ebooks that the application produces. This can be either the same folder as the original ebook, or a folder of your choice.
+* **A final preference is the output folder for the DRM-free copies of your ebooks that the application produces.** This can be either the same folder as the original ebook, or a folder of your choice.
 * Once these preferences have been set, you can drag and drop ebooks (or folders of ebooks) onto the DeDRM droplet to remove the DRM.
 * This program requires Mac OS X 10.4 or above. It will not work on Mac OS X 10.3 or earlier.
 
@@ -28,7 +28,6 @@ To remove the DRM of Kindle ebooks from eInk Kindles, eReader pdb ebooks, Barnes
 
 1. To set the preferences, double-click the application and follow the instructions in the dialogs.
 2. Drag & Drop DRMed ebooks or folders of DRMed ebooks onto the application icon when it is not running.
-3. The deDRMed book should on Desktop, if everything worked.
 
 
 
