@@ -1,6 +1,58 @@
 # DRM Removal Tools for eBooks v6.0.8
 This repository is a copy of the tools downloaded from [Apprentice Alf's Blog](http://www.apprenticealf.wordpress.com). I am not the author of these tools. I just wanted to keep them in a safe place. More info is at Apprentice Alf's blog post ["DRM Removal Tools for eBooks"](http://apprenticealf.wordpress.com/2012/09/10/drm-removal-tools-for-ebooks/).
 
+# Description
+DeDRM is an application that packs all of the python dm-removal software into one easy to use program that remembers preferences and settings.
+It works without manual configuration with Kindle for Mac ebooks and Adobe Adept (including nook) ePub and PDF ebooks.
+
+
+# Installation
+
+* Mac OS X 10.4 only: You must first install Python 2.7.3 from http://python.org/. At the time of writing, the direct download link is http://www.python.org/ftp/python/2.7.3/python-2.7.3-macosx10.3.dmg.
+* Mac OS X 10.5 and above: You do not need to install Python.
+
+
+# Configuration
+
+To remove the DRM of Kindle ebooks from eInk Kindles, eReader pdb ebooks, Barnes & Noble ePubs, or Mobipocket ebooks, you must first run DeDRM application (by double-clicking it) and set some additional Preferences including:
+
+* eInk Kindle (not Kindle Fire): 16 digit Serial Number
+* Barnes & Noble ePub:  Name and CC number or key file  (bnepubkey.b64)
+* eReader: Name and last 8 digits of CC number
+* Mobipocket: 10 digit PID
+* A final preference is the destination folder for the DRM-free copies of your ebooks that the application produces. This can be either the same folder as the original ebook, or a folder of your choice.
+* Once these preferences have been set, you can drag and drop ebooks (or folders of ebooks) onto the DeDRM droplet to remove the DRM.
+* This program requires Mac OS X 10.4 or above. It will not work on Mac OS X 10.3 or earlier.
+
+# Usage
+
+1. To set the preferences, double-click the application and follow the instructions in the dialogs.
+2. Drag & Drop DRMed ebooks or folders of DRMed ebooks onto the application icon when it is not running.
+3. The deDRMed book should on Desktop, if everything worked.
+
+
+
+
+# Troubleshooting
+
+A log is created on your desktop (DeDRM.log) containing detailed information from all the scripts. If you have any problems decrypting your ebooks, copy the contents of this log in a comment at Apprentice Alf's blog.
+http://apprenticealf.wordpress.com/
+
+# Credits
+The mobidedrm and erdr2pml scripts were created by The Dark Reverser
+
+The ignobleepub, ignoblekeygen, ineptepub and adobe key scripts were created by i♥cabbages
+
+The k4mobidedrm script and supporting scripts were written by some_updates with help from DiapDealer and Apprentice Alf, based on code by Bart Simpson (aka Skindle), CMBDTC and clarknova
+
+The alfcrypto library was created by some_updates
+
+The ePub encryption detection script was adapted by Apprentice Alf from a script by Paul Durrant
+
+The DeDRM all-in-one AppleScript was created by Apprentice Alf
+
+
+
 # Notes
 - I've changed the ReadMe_First.txt to readme.md
 - Updated the readme.md with change notes and also citing the original author of the tools
@@ -107,19 +159,19 @@ Other_Tools
 -----------
 This folder includes other tools that may be useful for DRMed ebooks from certain sources or for Linux users. Most users won't need any of these tools.
 
-**Key_Generation_Scripts**  
+**Key_Generation_Scripts**
 This folder contains python scripts that creates a keyfiles for Barnes and Noble ePubs, Adobe Digital Editions ePubs and Kindle for Mac/PC ebooks.
 
-**Kindle_for_Android_Patches**  
+**Kindle_for_Android_Patches**
 Definitely only for the adventurous, this folder contains information on how to modify the Kindel for Android app to b able to get a PID for use with the other Kindle tools (DeDRM apps and calibre plugin).
 
-**B&N_Download_Helper**  
+**B&N_Download_Helper**
 A Javascript to enable a download button at the B&N website for ebooks that normally won't download to your PC. Another one only for the adventurous.
 
-**Scuolabook_DRM**  
+**Scuolabook_DRM**
 A windows-only application (including source code) for removing DRM from ScuolaBooks PDFs, created by "Hex" and included with permission.
 
-**Rocket_ebooks**  
+**Rocket_ebooks**
 Information about the now-obsolete Rocket ebook format and DRM, along with source for a tool to remove the DRM.
 
 
@@ -137,17 +189,17 @@ The version from python.org is not as complete as most normal Python installatio
 
 In addition, Windows Users need one of PyCrypto OR OpenSSL. Because of potential conflicts with other software, we recommend using PyCrypto.
 
-### For PyCrypto:  
-There are many places to get PyCrypto installers for Windows. One such place is:  
-http://www.voidspace.org.uk/python/modules.shtml  
+### For PyCrypto:
+There are many places to get PyCrypto installers for Windows. One such place is:
+http://www.voidspace.org.uk/python/modules.shtml
 Please get the latest PyCrypto meant for Windows 32 bit that matches the version of Python you installed (2.7)
 
 ### For OpenSSL:
-**Win32 OpenSSL v0.9.8o (8Mb)**  
-http://www.slproweb.com/download/Win32OpenSSL-0_9_8o.exe  
-(if you get an error message about missing Visual C++ redistributables... cancel the install and install the below support program from Microsoft, THEN install OpenSSL)  
+**Win32 OpenSSL v0.9.8o (8Mb)**
+http://www.slproweb.com/download/Win32OpenSSL-0_9_8o.exe
+(if you get an error message about missing Visual C++ redistributables... cancel the install and install the below support program from Microsoft, THEN install OpenSSL)
 
-**Visual C++ 2008 Redistributables (1.7Mb)**  
+**Visual C++ 2008 Redistributables (1.7Mb)**
 http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF
 
 Once Windows users have installed Python 2.X for 32 bits, and the matching OpenSSL OR PyCrypto pieces, they too are ready to run a DeDRM application.
@@ -163,13 +215,13 @@ Requiem has a Tor website: http://tag3ulp55xczs3pn.onion. To reach the site usin
 
 Alternatively, you can download it from these download links:
 
-Requiem 3.3.6 for Windows: http://www.datafilehost.com/download-f7916922.html  
+Requiem 3.3.6 for Windows: http://www.datafilehost.com/download-f7916922.html
 MD5: 10ab191f2d86c692d57f6a07b4622cf8
 
-Requiem 3.3.6 for Mac OS X: http://www.datafilehost.com/download-47fce8b7.html  
+Requiem 3.3.6 for Mac OS X: http://www.datafilehost.com/download-47fce8b7.html
 MD5: 6d4167d47e6982ddbb8528212198b520
 
-Requiem 3.3.6 source code: http://www.datafilehost.com/download-172920e9.html  
+Requiem 3.3.6 source code: http://www.datafilehost.com/download-172920e9.html
 MD5: 1636862796d573c693d56bcc526b60bd
 
 If you have any problems with Requiem, I suggest you contact Brahms directly through their Tor website.
